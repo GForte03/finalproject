@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML tables and forms</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="site">
+  <aside class="sidebar" aria-label="Primary">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">GF</div>
+      <div>
+        <h1>Final Project Resources</h1>
+        <p>By: Gabrielle Forte - Web Design</p>
+      </div>
+    </div>
+
+    <nav aria-label="Site">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="codeEditor.html">Using the code editor</a></li>
+        <li><a href="semantic.html">HTML semantic structure</a></li>
+        <li><a href="tablesForms.html" aria-current="page">HTML tables and forms</a></li>
+        <li><a href="css.html">CSS styling and layout</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
+        <li><a href="validation.html">Code validation</a></li>
+        <li><a href="ethics.html">Ethical and legal issues</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="content">
+    <header class="page-header">
+      <h2>HTML tables and forms</h2>
+      <p>Using tables for data and forms for user input—accessibly.</p>
+    </header>
+
+    <main id="main" class="grid">
+      <div>
+        <section id="tables" class="card">
+  <h3>Tables</h3>
+  <p>
+    Tables are best for <em>tabular data</em> (information that belongs in rows and columns). Using
+    <code>&lt;caption&gt;</code>, <code>&lt;th&gt;</code>, and proper headers makes the table more accessible.
+  </p>
+
+  <div class="table-wrap" role="region" aria-label="Example course resources table" tabindex="0">
+    <table>
+      <caption>Example: Resource checklist</caption>
+      <thead>
+        <tr>
+          <th scope="col">Topic</th>
+          <th scope="col">Resource type</th>
+          <th scope="col">Why it helped</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Semantic HTML</td>
+          <td>Reference page</td>
+          <td>Quick definitions and examples</td>
+        </tr>
+        <tr>
+          <td>Forms</td>
+          <td>Video tutorial</td>
+          <td>Step-by-step walkthrough</td>
+        </tr>
+        <tr>
+          <td>CSS Layout</td>
+          <td>Article</td>
+          <td>Clear explanation of Flexbox/Grid</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="forms" class="card">
+  <h3>Forms</h3>
+  <p>
+    Forms collect user input. I try to use clear <code>&lt;label&gt;</code> text, logical grouping with
+    <code>&lt;fieldset&gt;</code>, and helpful placeholders (without relying on placeholders as labels).
+  </p>
+
+  <form aria-labelledby="sample-form-title">
+    <h4 id="sample-form-title">Sample contact form</h4>
+
+    <div class="form-row">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" />
+      </div>
+    </div>
+
+    <div style="margin-top:12px">
+      <label for="topic">Topic</label>
+      <select id="topic" name="topic">
+        <option value="">Choose one</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="a11y">Accessibility</option>
+      </select>
+    </div>
+
+    <div style="margin-top:12px">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+    </div>
+
+    <div style="margin-top:12px">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</section>
+
+<section id="video" class="card">
+  <h3>YouTube video</h3>
+  <p>
+    This video helped me understand the most common form inputs and how to structure a form clearly.
+  </p>
+  <iframe class="video"
+    src="https://www.youtube.com/watch?v=zIN54lhJtQU"
+    title="HTML Forms tutorial"
+    loading="lazy"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</section>
+
+<section id="article" class="card">
+  <h3>Article / reference</h3>
+  <p>
+    I use these references when I forget table/form tags or want to confirm best practices.
+  </p>
+  <ul>
+    <li>
+      <a class="external-link" href="https://www.w3schools.com/html/html_tables.asp" target="_blank" rel="noopener">
+        W3Schools: HTML Tables
+      </a>
+    </li>
+    <li>
+      <a class="external-link" href="https://www.w3schools.com/html/html_forms.asp" target="_blank" rel="noopener">
+        W3Schools: HTML Forms
+      </a>
+    </li>
+  </ul>
+</section>
+      </div>
+
+      <aside class="card toc" aria-label="On this page">
+        <h3>On this page</h3>
+        <ul>
+              <li><a href="#tables">Tables</a></li>
+              <li><a href="#forms">Forms</a></li>
+              <li><a href="#video">Video</a></li>
+              <li><a href="#article">Article</a></li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer>
+      <p>
+        Project hosted by:
+        <a class="external-link" href="https://github.com/GForte03" target="_blank" rel="noopener">GitHub: GForte03</a>
+        • Validate:
+        <a class="external-link" href="https://validator.w3.org/" target="_blank" rel="noopener">HTML</a>,
+        <a class="external-link" href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">CSS</a>
+      </p>
+    </footer>
+  </div>
+</div>
+</body>
+</html>

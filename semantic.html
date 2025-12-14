@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML semantic elements and structure</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="site">
+  <aside class="sidebar" aria-label="Primary">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">GF</div>
+      <div>
+        <h1>Final Project Resources</h1>
+        <p>By: Gabrielle Forte - Web Design</p>
+      </div>
+    </div>
+
+    <nav aria-label="Site">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="codeEditor.html">Using the code editor</a></li>
+        <li><a href="semantic.html" aria-current="page">HTML semantic structure</a></li>
+        <li><a href="tablesForms.html">HTML tables and forms</a></li>
+        <li><a href="css.html">CSS styling and layout</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
+        <li><a href="validation.html">Code validation</a></li>
+        <li><a href="ethics.html">Ethical and legal issues</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="content">
+    <header class="page-header">
+      <h2>HTML semantic elements and structure</h2>
+      <p>Building webpages with meaningful, accessible structure.</p>
+    </header>
+
+    <main id="main" class="grid">
+      <div>
+        <section id="structure" class="card">
+  <h3>Why semantic HTML matters</h3>
+  <p>
+    Semantic elements (such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code>) assist human, screen reader, and search engine understanding of pages.
+  </p>
+  <p>
+    Because each section of the site has a distinct purpose, I found that applying semantic organization helped my projects feel cleaner and simpler to manage.
+  </p>
+  <figure>
+    <img src="semanticpic.png" alt="image showing a project layout that uses semantic HTML elements." />
+    <figcaption>This is the CSS style sheet that I created for a project, showing how I styled the HTML semantic elements.</figcaption>
+  </figure>
+</section>
+
+<section id="video" class="card">
+  <h3>YouTube video</h3>
+  <p>
+    This video explains the difference between “generic” containers (like <code>&lt;div&gt;</code>) and semantic elements,
+    and how to structure a page in a meaningful way.
+  </p>
+  <iframe class="video"
+    src="https://www.youtube.com/watch?v=YPzFPoqwTmI"
+    title="Semantic HTML explained"
+    loading="lazy"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</section>
+
+<section id="article" class="card">
+  <h3>Article / reference</h3>
+  <p>
+    This reference page helped me quickly learn what each semantic element is for and when to use it.
+  </p>
+  <p>
+    <a class="external-link" href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank" rel="noopener">
+      W3Schools: HTML Semantic Elements
+    </a>
+  </p>
+</section>
+      </div>
+
+      <aside class="card toc" aria-label="On this page">
+        <h3>On this page</h3>
+        <ul>
+              <li><a href="#structure">Semantic structure</a></li>
+              <li><a href="#video">Video</a></li>
+              <li><a href="#article">Article</a></li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer>
+      <p>
+        Project hosted by:
+        <a class="external-link" href="https://github.com/GForte03" target="_blank" rel="noopener">GitHub: GForte03</a>
+        • Validate:
+        <a class="external-link" href="https://validator.w3.org/" target="_blank" rel="noopener">HTML</a>,
+        <a class="external-link" href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">CSS</a>
+      </p>
+    </footer>
+  </div>
+</div>
+</body>
+</html>

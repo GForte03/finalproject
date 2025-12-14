@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS styling and layout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="site">
+  <aside class="sidebar" aria-label="Primary">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">GF</div>
+      <div>
+        <h1>Final Project Resources</h1>
+        <p>By: Gabrielle Forte - Web Design</p>
+      </div>
+    </div>
+
+    <nav aria-label="Site">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="codeEditor.html">Using the code editor</a></li>
+        <li><a href="semantic.html">HTML semantic structure</a></li>
+        <li><a href="tablesForms.html">HTML tables and forms</a></li>
+        <li><a href="css.html" aria-current="page">CSS styling and layout</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
+        <li><a href="validation.html">Code validation</a></li>
+        <li><a href="ethics.html">Ethical and legal issues</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="content">
+    <header class="page-header">
+      <h2>CSS styling and layout</h2>
+      <p>Using consistent styles, modern layouts, and responsive patterns.</p>
+    </header>
+
+    <main id="main" class="grid">
+      <div>
+        <section id="styling" class="card">
+  <h3>Styling basics</h3>
+  <p>
+    I can alter color, font, spacing, and focus/hover states with CSS. I even utilized CSS variables for this website to maintain this pink theme throughout all of the pages.
+  </p>
+  <pre><code>:root {{
+  --accent: #d63384;
+  --border: #f2b7d8;
+}}</code></pre>
+</section>
+
+<section id="layout" class="card">
+  <h3>Layout with Flexbox and Grid</h3>
+  <p>
+    For one-dimensional layouts (rows or columns), I use <strong>Flexbox</strong>, and for two-dimensional layouts (rows <em>and</em> columns), I use <strong>Grid</strong>. Grid is used for the main content and sidebar in this project, while Flexbox is used for the overall layout.
+  </p>
+  <pre><code>/* Flexbox: page layout */
+.site {{
+  display: flex;
+}}
+
+/* Grid: content + table of contents */
+.grid {{
+  display: grid;
+  grid-template-columns: 1fr 280px;
+}}</code></pre>
+</section>
+
+<section id="responsive" class="card">
+  <h3>Responsive design</h3>
+  <p>
+    The website functions better on PCs, tablets, and phones thanks to responsive design. In order to have the left navigation appear at the top on smaller displays, I utilized media queries.
+  </p>
+  <pre><code>@media (max-width: 720px) {{
+  .site {{ flex-direction: column; }}
+  .sidebar {{ width: auto; height: auto; }}
+}}</code></pre>
+</section>
+
+<section id="video" class="card">
+  <h3>YouTube video</h3>
+  <p>
+    This video was useful for understanding when to use Flexbox vs Grid and how to build modern layouts.
+  </p>
+  <iframe class="video"
+    src="https://www.youtube.com/embed/3elGSZSWTbM"
+    title="CSS Flexbox and Grid overview"
+    loading="lazy"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</section>
+
+<section id="article" class="card">
+  <h3>Articles / references</h3>
+  <p>
+    These pages helped me review layout properties and syntax while building assignments.
+  </p>
+  <ul>
+    <li>
+      <a class="external-link" href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank" rel="noopener">
+        W3Schools: CSS Flexbox
+      </a>
+    </li>
+    <li>
+      <a class="external-link" href="https://www.w3schools.com/css/css_grid.asp" target="_blank" rel="noopener">
+        W3Schools: CSS Grid
+      </a>
+    </li>
+  </ul>
+</section>
+      </div>
+
+      <aside class="card toc" aria-label="On this page">
+        <h3>On this page</h3>
+        <ul>
+              <li><a href="#styling">Styling</a></li>
+              <li><a href="#layout">Layout</a></li>
+              <li><a href="#responsive">Responsive design</a></li>
+              <li><a href="#video">Video</a></li>
+              <li><a href="#article">Articles</a></li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer>
+      <p>
+        Project hosted by:
+        <a class="external-link" href="https://github.com/GForte03" target="_blank" rel="noopener">GitHub: GForte03</a>
+        • Validate:
+        <a class="external-link" href="https://validator.w3.org/" target="_blank" rel="noopener">HTML</a>,
+        <a class="external-link" href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">CSS</a>
+      </p>
+    </footer>
+  </div>
+</div>
+</body>
+</html>

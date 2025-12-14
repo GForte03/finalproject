@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accessibility</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="site">
+  <aside class="sidebar" aria-label="Primary">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">GF</div>
+      <div>
+        <h1>Final Project Resources</h1>
+        <p>By: Gabrielle Forte - Web Design</p>
+      </div>
+    </div>
+
+    <nav aria-label="Site">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="codeEditor.html">Using the code editor</a></li>
+        <li><a href="semantic.html">HTML semantic structure</a></li>
+        <li><a href="tablesForms.html">HTML tables and forms</a></li>
+        <li><a href="css.html">CSS styling and layout</a></li>
+        <li><a href="accessibility.html" aria-current="page">Accessibility</a></li>
+        <li><a href="validation.html">Code validation</a></li>
+        <li><a href="ethics.html">Ethical and legal issues</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="content">
+    <header class="page-header">
+      <h2>Accessibility</h2>
+      <p>Designing so more people can use the site (keyboard, screen readers, contrast, and structure).</p>
+    </header>
+
+    <main id="main" class="grid">
+      <div>
+        <section id="principles" class="card">
+  <h3>Accessibility practices I used</h3>
+  <ul>
+    <li>Semantic structure (<code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>footer</code>)</li>
+    <li>A “Skip to main content” link for keyboard users</li>
+    <li>Visible focus styles (<code>:focus-visible</code>)</li>
+    <li>Alt text for images (especially screenshots)</li>
+    <li>Clear headings in order (H1 → H2 → H3)</li>
+    <li>Descriptive link text (not “click here”)</li>
+  </ul>
+</section>
+
+<section id="example" class="card">
+  <h3>Example: accessible form label</h3>
+  <p>
+    Labels should be connected to inputs using <code>for</code> and <code>id</code>.
+  </p>
+  <pre><code>&lt;label for="email"&gt;Email&lt;/label&gt;
+&lt;input id="email" type="email" /&gt;</code></pre>
+</section>
+
+<section id="video" class="card">
+  <h3>YouTube video</h3>
+  <p>
+    This video helped me understand common accessibility issues and how small HTML changes can make a big difference.
+  </p>
+  <iframe class="video"
+    src="https://www.youtube.com/embed/3f31oufqFSM"
+    title="Web accessibility basics"
+    loading="lazy"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen></iframe>
+</section>
+
+<section id="article" class="card">
+  <h3>Articles / references</h3>
+  <p>
+    These references were especially helpful when I worked on labeling, keyboard navigation, and overall structure.
+  </p>
+  <ul>
+    <li>
+      <a class="external-link" href="https://www.w3schools.com/accessibility/accessibility_labels.php" target="_blank" rel="noopener">
+        W3Schools: Accessibility Labels
+      </a>
+    </li>
+    <li>
+      <a class="external-link" href="https://www.w3schools.com/html/html_accessibility.asp" target="_blank" rel="noopener">
+        W3Schools: HTML Accessibility
+      </a>
+    </li>
+    <li>
+      <a class="external-link" href="https://www.w3schools.com/css/css_accessibility.asp" target="_blank" rel="noopener">
+        W3Schools: CSS Accessibility
+      </a>
+    </li>
+  </ul>
+</section>
+      </div>
+
+      <aside class="card toc" aria-label="On this page">
+        <h3>On this page</h3>
+        <ul>
+              <li><a href="#principles">Practices</a></li>
+              <li><a href="#example">Example</a></li>
+              <li><a href="#video">Video</a></li>
+              <li><a href="#article">Articles</a></li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer>
+      <p>
+        Project hosted by:
+        <a class="external-link" href="https://github.com/GForte03" target="_blank" rel="noopener">GitHub: GForte03</a>
+        • Validate:
+        <a class="external-link" href="https://validator.w3.org/" target="_blank" rel="noopener">HTML</a>,
+        <a class="external-link" href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">CSS</a>
+      </p>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
